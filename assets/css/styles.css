@@ -1,0 +1,100 @@
+
+.inputQ{
+    width: 40vw;
+    max-width: 380px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agrega una sombra al texto */
+}
+
+.container-search-form{
+    display: grid;
+    place-items: center;
+}
+
+.welcome-section {
+    background-image: url('../img/mountains.jpg');
+    background-size: cover; /* Evita la distorsión y ajusta la imagen para cubrir todo el div */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    opacity: 0.8; /* Cambia la opacidad de la imagen (0 = transparente, 1 = opaco) */
+    color: white; /* Establece el color del texto en blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agrega un contorno gris al texto */
+    font-weight: bold; /* Aplica negrita al texto */
+    height: 340px;
+}
+
+header{
+    position: fixed;
+    z-index: 899;
+    width: 100vw;
+}
+
+/* filters */
+.image_type, .category, .orientation{
+    width: auto;
+    cursor: pointer;
+}
+
+body, .album{
+    background-color: #343A40 !important;
+}
+
+.fixHorizontal {
+    height: 200px; /* Establece la altura deseada para las imágenes */
+    width: auto; /* Permite que el ancho se ajuste automáticamente */
+    object-fit: cover; /* Evita la distorsión y ajusta la imagen para cubrir el espacio */
+    cursor: pointer;
+}
+
+.fixVertical {
+    height: 440px; /* Establece la altura deseada para las imágenes */
+    width: auto; /* Permite que el ancho se ajuste automáticamente */
+    object-fit: cover; /* Evita la distorsión y ajusta la imagen para cubrir el espacio */
+    cursor: pointer;
+}
+
+.navbar{
+    background-color: #22262a !important;
+}
+
+.search-itself{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    justify-content: center;
+    align-items: end;
+}
+
+.container-form-options{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.filter-options{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+
+.filter-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px;
+}
+
+select {
+    text-align: center; /* Centra el texto horizontalmente */
+    /* Otras propiedades de estilo según sea necesario */
+}
+
+/* Estilo personalizado para las opciones */
+select option {
+    text-align: center; /* Centra el texto horizontalmente */
+    vertical-align: middle; /* Centra el texto verticalmente (puede no funcionar en todos los navegadores) */
+}
+
+.copied{
+    opacity: 0.7;
+}
