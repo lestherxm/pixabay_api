@@ -29,74 +29,6 @@ function getPixabayImages(query = '', image_type = 'all', category = null, orien
         });
 }
 
-// Esta funcion toma el elemento HTML donde se muestran los resultados, elimina el conteniod
-// anterior y luego crea tarjetas con las imagenes de la nueba busqueda
-/*function show(images){
-    let rowResultSet = document.querySelector('#rowResultSet');
-    rowResultSet.innerHTML = ''; // Limpiar resultados de busquedas anteriores
-    images.forEach(image => {
-        console.log(image);
-        // Crear elementos HTML
-        const colDiv = document.createElement("div");
-        colDiv.classList.add("col-md-4");
-
-        const cardDiv = document.createElement("div");
-        cardDiv.classList.add("card", "mb-4", "box-shadow");
-
-        const img = document.createElement("img");
-
-        if (document.getElementById('orientation').value == 'horizontal') {
-            img.classList.add("fixHorizontal");
-        }else{
-            img.classList.add("fixVertical");
-        }
-
-        img.classList.add("card-img-top", "img-result");
-        img.src = image.largeImageURL; // Establecer la URL de la imagen
-        img.alt = "Card image cap";
-
-        cardDiv.appendChild(img);
-        //cardDiv.appendChild(cardBodyDiv);
-
-        colDiv.appendChild(cardDiv);
-
-        // Adjuntar el nuevo div creado al div existente con id "rowResultSet"
-        rowResultSet.appendChild(colDiv);
-    });
-}*/
-
-/*function show(images) {
-    let rowResultSet = document.querySelector('#rowResultSet');
-    rowResultSet.innerHTML = ''; // Limpiar resultados de búsquedas anteriores
-
-    images.forEach(image => {
-        // Crear elementos HTML
-        const colDiv = document.createElement("div");
-        colDiv.classList.add("col-md-4");
-
-        const cardDiv = document.createElement("div");
-        cardDiv.classList.add("card", "mb-4", "box-shadow");
-
-        const img = document.createElement("img");
-
-        if (document.getElementById('orientation').value == 'horizontal') {
-            img.classList.add("fixHorizontal");
-        } else {
-            img.classList.add("fixVertical");
-        }
-
-        img.classList.add("card-img-top", "img-result");
-        img.src = image.largeImageURL;
-        img.alt = "Card image cap";
-
-        cardDiv.appendChild(img);
-        colDiv.appendChild(cardDiv);
-
-        // Adjuntar el nuevo div creado al div existente con id "rowResultSet"
-        rowResultSet.appendChild(colDiv);
-    });
-}*/
-
 function show(images) {
     let rowResultSet = document.querySelector('#rowResultSet');
     rowResultSet.innerHTML = ''; 
@@ -137,6 +69,14 @@ function show(images) {
             document.execCommand("copy");
             document.body.removeChild(textArea);
             
+            // Mostrar SweetAlert con el mensaje "Copiado" y un ícono de éxito
+            Swal.fire({
+                title: 'Copiado',
+                icon: 'success',
+                showConfirmButton: false,
+                timer: 1000, // Ocultar automáticamente después de un segundo
+            });
+
         });
 
         cardDiv.appendChild(img);
